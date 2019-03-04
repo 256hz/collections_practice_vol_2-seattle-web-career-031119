@@ -40,13 +40,12 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  count_array = []
+  new_array = []
   array.each do |item|
-    puts item
-    if count_array.find(item) == false
-      count_array.push({item, ':count' => 1})
+    if new_array.include?(item) == false
+      new_array << {:name => item[:name], :count => 1}
     else
-      count_array[item][':count'] += 1
+      new_array[item][:count] += 1
     end
   end
 end
