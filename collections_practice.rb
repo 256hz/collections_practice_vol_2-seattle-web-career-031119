@@ -45,7 +45,8 @@ def count_elements(array)
     if new_array.include?(item) == false
       new_array << {:name => item[:name], :count => 1}
     else
-      new_array[item][:count] += 1
+      new_array.each do |element|
+        if element
     end
   end
 end
