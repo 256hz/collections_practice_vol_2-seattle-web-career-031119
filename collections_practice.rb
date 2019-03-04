@@ -47,9 +47,12 @@ def count_elements(array)
     else
       new_array.each do |element|
         if element[:name] == item[:name]
-          
+          element[:count] += 1
+        end
+      end
     end
   end
+  new_array
 end
 
 def merge_data(array1, array2)
