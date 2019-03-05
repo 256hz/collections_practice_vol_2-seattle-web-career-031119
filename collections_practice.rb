@@ -43,7 +43,9 @@ def count_elements(array)
   new_array = []
   array.each do |item|
     if new_array.include?(item) == false
+      puts "#{item} not found in #{new_array}"
       new_array << {:name => item[:name], :count => 1}
+      puts "new_array = #{new_array}"
     else
       new_array.each do |element|
         if element[:name] == item[:name]
