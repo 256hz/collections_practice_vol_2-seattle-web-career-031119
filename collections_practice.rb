@@ -83,15 +83,16 @@ def organize_schools(schools)
   sorted_schools = {}
   schools.each do |school, city|
     puts school, city
-    if sorted_schools.find{|k, v| v.include?(city[:location])} == false
+    if sorted_schools.find{|k, v| k.include?(city[:location])} == false
       puts "#{city[:location]} not found in #{sorted_schools}"
-      sorted_schools << {city => [school[:location]]}
+      sorted_schools << {city => [school]}
       puts "#{sorted_schools} updated"
     else
-      sorted_schools[city].push(school[:location])
-      puts "#{sorted_schools} updated with "
+      sorted_schools[city].push(school)
+      puts "#{sorted_schools[city]} updated with #{school}"
     end
   end
   sorted_schools
 end
-    
+
+organize_schools(input)
