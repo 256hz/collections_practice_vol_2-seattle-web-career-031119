@@ -48,7 +48,7 @@ def count_elements(array)
       puts "new_array = #{new_array}"
     else
       new_array.each do |element|
-        if element[:name] == item[:name]
+        if element[0][:name] == item[:name]
           element[:count] += 1
           puts "#{element} increased"
         else
