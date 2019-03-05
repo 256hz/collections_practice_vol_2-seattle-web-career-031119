@@ -77,7 +77,7 @@ def organize_schools(schools)
   sorted_schools = {}
   schools.each do |school, city|
     if sorted_schools.find {|k, v| v.include?(city)} == false
-      sorted_schools << {city => school}
+      sorted_schools << {city => [school]}
     else
       sorted_schools[city].push(school)
     end
