@@ -17,8 +17,14 @@ describe 'collections practice vol 2.' do
 
   let(:data) {
     [
-           
-        }
+        {
+                   :name => "ashley",
+            :temperature => "sort of cool"
+        },
+            {
+                   :name => "blake",
+            :temperature => "cool"
+        }   
     ]
   }
 
