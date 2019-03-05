@@ -50,9 +50,8 @@ def count_elements(array)
           included = true
         end
       end
-    else
-      new_array << {:name => item_in[:name], :count => 1} if included == false
     end
+    new_array << {:name => item_in[:name], :count => 1} if included == false
   end
   puts new_array
 end
