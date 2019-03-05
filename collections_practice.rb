@@ -60,7 +60,7 @@ def merge_data(keys, data)
   data.each do |list|
     list.each do |hash|
       puts "hash:\n  #{hash}"
-      hash.each_with_index do |name, index, attributes|
+      hash.each.with_index do |name, attributes, index|
         puts "name, attributes, index:\n  #{name}, #{attributes}, #{index}"
         attributes.each do |key, value|
           puts "key, value:\n  #{key}, #{value}"
