@@ -64,7 +64,7 @@ def merge_data(keys, data)
       attributes.each do |key|
         puts "key, value:\n  #{key}, #{attributes[key]}"
         keys[index][key] = attributes[key]
-        puts "adding keys[#{index}][#{key}] = #{value}"
+        puts "adding keys[#{index}][#{key}] = #{attributes[key]}"
         puts "keys:\n  #{keys}"
       end
     end
