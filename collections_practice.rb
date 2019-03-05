@@ -55,10 +55,13 @@ def count_elements(array)
   new_array
 end
 
-def merge_data(array1, array2)
-  answer = []
-  
-  answer
+def merge_data(keys, data)
+  #merged = []
+  data.each.with_index do |hash, index|
+    hash.each do |name, attributes|
+      attributes.each do |key, value|
+        keys[index][key] = value
+  keys
 end
 
 def find_cool(hash)
