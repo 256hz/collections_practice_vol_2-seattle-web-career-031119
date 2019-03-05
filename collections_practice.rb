@@ -57,15 +57,17 @@ end
 
 def merge_data(keys, data)
   #merged = []
-  data.each do |hash|
-    puts "hash:\n  #{hash}"
-    hash.each_with_index do |name, index, attributes|
-      puts "name, attributes, index:\n  #{name}, #{attributes}, #{index}"
-      attributes.each do |key, value|
-        puts "key, value:\n  #{key}, #{value}"
-        keys[index][key] = value
-        puts "adding keys[#{index}][#{key}] = #{value}"
-        puts "keys:\n  #{keys}"
+  data.each do |list|
+    list.each do |hash|
+      puts "hash:\n  #{hash}"
+      hash.each_with_index do |name, index, attributes|
+        puts "name, attributes, index:\n  #{name}, #{attributes}, #{index}"
+        attributes.each do |key, value|
+          puts "key, value:\n  #{key}, #{value}"
+          keys[index][key] = value
+          puts "adding keys[#{index}][#{key}] = #{value}"
+          puts "keys:\n  #{keys}"
+        end
       end
     end
   end
