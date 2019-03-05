@@ -74,7 +74,7 @@ def find_cool(hash)
 end
 
 def organize_schools(schools)
-begin=
+=begin
   sorted_schools = {}
   schools.each do |school, city|
     if sorted_schools.find {|k, v| v.include?(city)} == false
@@ -84,6 +84,7 @@ begin=
     end
   end
   sorted_schools
-end=
+=end
+  schools
 end
     
