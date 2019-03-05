@@ -74,6 +74,8 @@ def find_cool(hash)
 end
 
 def organize_schools(schools)
-  schools
+  sorted_schools = {}
+  schools.each do |school, city|
+    if 
 end
     
