@@ -56,17 +56,11 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-  #merged = []
   data[0].each.with_index do |hash, index|
-    puts "hash, index:\n  #{hash}, #{index}"
     hash[1].each do |key, value|
-      puts "key, value:\n  #{key}, #{value}"
       keys[index][key] = hash[1][key]
-      puts "adding keys[#{index}][#{key}] = #{hash[1][key]}"
-      puts "keys:\n  #{keys}"
     end
   end
-  puts keys
   keys
 end
 
