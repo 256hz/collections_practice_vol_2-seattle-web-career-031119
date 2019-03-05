@@ -54,7 +54,7 @@ def count_elements(array)
       new_array << {:name => item_in[:name], :count => 1} if included == false
     end
   end
-  new_array
+  puts new_array
 end
 
 count_elements(input_array)
