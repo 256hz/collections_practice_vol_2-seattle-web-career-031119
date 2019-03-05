@@ -76,6 +76,8 @@ end
 def organize_schools(schools)
   sorted_schools = {}
   schools.each do |school, city|
-    if 
+    if sorted_schools.find {|x, y| y.include?(city)} == false
+      sorted_schools << {city => school}
+    else
 end
     
