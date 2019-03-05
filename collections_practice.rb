@@ -57,8 +57,8 @@ end
 
 def merge_data(array1, array2)
   answer = []
-  array1.each {|item| answer << item}
-  array2.each {|item| answer << item}
+  array1.each {|item| puts item}
+  array2.each {|item| puts item}
   puts answer
 end
 
