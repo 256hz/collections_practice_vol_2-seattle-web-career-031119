@@ -43,11 +43,14 @@ def count_elements(array)
   new_array = []
   array.each do |item_in|
     included = false
-    new_array.each do |item_out| if new_array != []
-      if item_in[:name] == item_out[:name]
-        item_out[:count] += 1
-        included = true
+    if new_array != []
+      new_array.each do |item_out| 
+        if item_in[:name] == item_out[:name]
+          item_out[:count] += 1
+          included = true
+        end
       end
+    else
       new_array << {:name => item_in[:name], :count => 1} if included == false
     end
   end
