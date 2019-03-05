@@ -37,8 +37,6 @@ def remove_non_strings(array)
   new_array
 end
 
-input_array = [{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}]
-
 def count_elements(array)
   new_array = []
   array.each do |item_in|
@@ -58,11 +56,8 @@ def count_elements(array)
   new_array
 end
 
-count_elements(input_array)
-
 def merge_data(array1, array2)
-  new_array = array1.concat(array2)
-  new_array.flatten
+  (array1, array2)
 end
 
 def find_cool(hash)
@@ -72,12 +67,6 @@ def find_cool(hash)
   end
   cool_hashes
 end
-
-input = {"Hack Reactor"=>{:location=>"SF"}, 
-        "dev boot camp"=>{:location=>"SF"}, 
-        "flatiron school bk"=>{:location=>"NYC"}, 
-        "general assembly"=>{:location=>"NYC"}
-      }
 
 def organize_schools(schools)
   sorted_schools = {}
@@ -90,5 +79,3 @@ def organize_schools(schools)
   end
   sorted_schools
 end
-
-organize_schools(input)
