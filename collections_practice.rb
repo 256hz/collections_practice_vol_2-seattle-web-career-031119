@@ -57,7 +57,9 @@ def count_elements(array)
 end
 
 def merge_data(array1, array2)
-  [array1, array2]
+  answer = []
+  array1.each {|item| answer << item}
+  array2.each {|item| answer << item}
 end
 
 def find_cool(hash)
