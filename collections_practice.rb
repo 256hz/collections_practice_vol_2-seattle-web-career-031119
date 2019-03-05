@@ -10,8 +10,6 @@ def begins_with_r(tools)
   they_r_all_r
 end
 
-tools = ["arouter", "aruler", "rtape measure"]
-
 def contain_a(string)
   a_list = []
   string.each do |word|
@@ -39,6 +37,8 @@ def remove_non_strings(array)
   new_array
 end
 
+input_array = [{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}]
+
 def count_elements(array)
   new_array = []
   array.each do |item|
@@ -50,12 +50,17 @@ def count_elements(array)
       new_array.each do |element|
         if element[:name] == item[:name]
           element[:count] += 1
+          puts "#{element} increased"
+        else
+          puts "skipping #{element[:name]}"
         end
       end
     end
   end
   new_array
 end
+
+count_elements(input_array)
 
 def merge_data(array1, array2)
   array1.concat(array2)
