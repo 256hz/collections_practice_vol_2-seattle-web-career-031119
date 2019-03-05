@@ -74,17 +74,14 @@ def find_cool(hash)
 end
 
 def organize_schools(schools)
-=begin
   sorted_schools = {}
   schools.each do |school, city|
     if sorted_schools.find {|k, v| v.include?(city)} == false
-      sorted_schools << {city => [school]}
+      sorted_schools << {city => [school[:location]]}
     else
-      sorted_schools[city].push(school)
+      sorted_schools[city].push(school[:location])
     end
   end
   sorted_schools
-=end
-  schools
 end
     
