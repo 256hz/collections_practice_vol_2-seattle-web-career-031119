@@ -73,13 +73,23 @@ def find_cool(hash)
   cool_hashes
 end
 
+input = {"Hack Reactor"=>{:location=>"SF"}, 
+        "dev boot camp"=>{:location=>"SF"}, 
+        "flatiron school bk"=>{:location=>"NYC"}, 
+        "general assembly"=>{:location=>"NYC"}
+      }
+
 def organize_schools(schools)
   sorted_schools = {}
   schools.each do |school, city|
-    if sorted_schools.find{|k, v| v[:location].include?(city)} == false
+    puts school, city
+    if sorted_schools.find{|k, v| v.include?(city[:location])} == false
+      puts "#{city[:location]} not found in #{sorted_schools}"
       sorted_schools << {city => [school[:location]]}
+      puts "#{sorted_schools} updated"
     else
       sorted_schools[city].push(school[:location])
+      puts ""
     end
   end
   sorted_schools
