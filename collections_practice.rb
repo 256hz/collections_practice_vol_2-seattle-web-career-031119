@@ -88,7 +88,7 @@ def organize_schools(schools)
       sorted_schools[city[:location]] = [school]
       puts "#{sorted_schools} updated"
     else
-      sorted_schools[city[:location]] = school
+      sorted_schools[city[:location]].push(school)
       puts "#{city[:location]} updated with #{school}"
     end
   end
