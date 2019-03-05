@@ -60,8 +60,8 @@ def merge_data(keys, data)
   data.each do |hash|
     
       puts "hash:\n  #{hash}"
-      hash.each do |name, attributes|
-        puts "name, attributes:\n  #{name}, #{attributes}"
+      hash.each.with_index do |name, attributes, index|
+        puts "name, attributes, index:\n  #{name}, #{attributes}, #{index}"
         attributes.each do |key, value|
           puts "key, value:\n  #{key}, #{value}"
           keys[index][key] = value
