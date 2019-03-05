@@ -2,7 +2,6 @@ def begins_with_r(tools)
   they_r_all_r = true
   counter = 0
   tools.each do |tool|
-    puts tool
     if tool.start_with?('r') == false
       they_r_all_r = false
     end
@@ -60,6 +59,7 @@ def merge_data(array1, array2)
   answer = []
   array1.each {|item| answer << item}
   array2.each {|item| answer << item}
+  puts answer
 end
 
 def find_cool(hash)
