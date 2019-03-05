@@ -57,7 +57,7 @@ def count_elements(array)
 end
 
 def merge_data(array1, array2)
-  (array1, array2)
+  [array1, array2]
 end
 
 def find_cool(hash)
