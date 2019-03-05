@@ -61,6 +61,9 @@ def merge_data(keys, data)
     hash.each do |name, attributes|
       attributes.each do |key, value|
         keys[index][key] = value
+      end
+    end
+  end
   keys
 end
 
