@@ -41,22 +41,15 @@ input_array = [{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}]
 
 def count_elements(array)
   new_array = []
-  array.each do |item|
-    if new_array.include?(item) == false
-      puts "#{item} not found in #{new_array}"
-      new_array << {:name => item[:name], :count => 1}
-      puts "new_array = #{new_array}"
-    else
-      new_array.each do |element|
-        if element[0][:name] == item[:name]
-          element[:count] += 1
-          puts "#{element} increased"
-        else
-          puts "skipping #{element[:name]}"
-        end
+  array.each do |item_in|
+    included = false
+    new_array.each do |item_out| if new_array != []
+      if item_in[:name] == item_out[:name]
+        item_out[:count] += 1
+        included = true
       end
+      new_array << {:name => item_in[:name], :count => 1} if included == false
     end
-  end
   new_array
 end
 
