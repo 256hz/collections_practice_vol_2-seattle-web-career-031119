@@ -61,7 +61,8 @@ end
 count_elements(input_array)
 
 def merge_data(array1, array2)
-  array1.each
+  array1.concat(array2)
+  array1.flatten
 end
 
 def find_cool(hash)
