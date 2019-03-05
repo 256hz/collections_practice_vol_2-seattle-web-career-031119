@@ -61,7 +61,7 @@ def merge_data(keys, data)
     
       puts "hash:\n  #{hash}"
       hash.each do |name, attributes|
-        puts "name, attributes, index:\n  #{name}, #{attributes}"
+        puts "name, attributes:\n  #{name}, #{attributes}"
         attributes.each do |key, value|
           puts "key, value:\n  #{key}, #{value}"
           keys[index][key] = value
